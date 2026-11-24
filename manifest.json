@@ -1,0 +1,17 @@
+{
+  "id": "/",
+  "name": "Matcha Mood — A little cup of comfort",
+  "short_name": "Matcha Mood",
+  "description": "Bikin matcha virtual, istirahat sejenak, dan temukan pesan manis untuk harimu.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4e8d6",
+  "theme_color": "#f4e8d6",
+  "icons": [
+    {"src":"/assets/icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"/assets/icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"/assets/icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ]
+}

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4e8d6"><meta name="description" content="Bikin matcha virtual, istirahat sejenak, dan temukan pesan manis untuk harimu.">
+<link rel="manifest" href="manifest.json"><link rel="icon" href="assets/icons/icon-192.png"><link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<title>Matcha Mood — A little cup of comfort</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar"><a class="brand" href="#" aria-label="Matcha Mood Home"><span class="brand-icon">🍵</span><span>matcha <em>mood</em></span></a><div class="top-actions"><button id="soundToggle" class="icon-btn" title="Toggle sound" aria-label="Toggle sound">🔊</button><button id="settingsBtn" class="icon-btn" title="Personalize game" aria-label="Personalize game">⚙️</button></div></header>
+  <main>
+    <section class="welcome" id="welcome"><div class="welcome-copy"><p class="eyebrow">YOUR LITTLE COMFORT CORNER</p><h1>A little matcha,<br><span>a little better.</span></h1><p>Pelan-pelan saja. Kita bikin sesuatu yang hangat untuk hari ini.</p></div><div class="hero-cup" aria-hidden="true"><span class="steam steam1"></span><span class="steam steam2"></span><div class="cup"><div class="drink">🍵</div><div class="cup-face">•ᴗ•</div></div><div class="cup-handle"></div><span class="sparkle s1">✦</span><span class="sparkle s2">✧</span><span class="sparkle s3">✦</span></div></section>
+    <section class="game-card"><div class="progress-head"><span id="stepLabel">LET'S START</span><span id="stepCount">01 / 06</span></div><div class="progress-track"><div id="progressBar"></div></div><div id="message" class="message" aria-live="polite">Hai! Sebelum mulai, ceritakan sedikit tentang harimu.</div><div id="game" class="game-area"></div></section>
+    <footer><span>Made with a little love & matcha 🍃</span><span id="offlineStatus">● Online</span></footer>
+  </main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<dialog id="settingsDialog"><form method="dialog" class="settings-form"><div class="dialog-head"><div><p class="eyebrow">PERSONAL TOUCH</p><h2>Customize your cup</h2></div><button class="icon-btn close-btn" aria-label="Close">✕</button></div><label>Default name<input id="cfgName" maxlength="28"></label><label>Sweet message<textarea id="cfgLetter" rows="4" maxlength="700"></textarea></label><label>Secret message<textarea id="cfgSecret" rows="2" maxlength="250"></textarea></label><p class="settings-note">Kupon dan pesan mood default dapat diedit di <code>config.js</code>. Foto kenangan dapat ditambahkan melalui daftar <code>photos</code> (gunakan file lokal di folder assets).</p><div class="dialog-actions"><button type="button" class="btn secondary" id="resetConfig">Reset default</button><button class="btn primary" id="saveConfig" value="save">Save changes</button></div></form></dialog>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
