@@ -2,17 +2,17 @@
 const CONFIG={
  defaultName:"cintaa",
  reasons:[
-  "Kamu selalu bikin hariku lebih terang.",
-  "Tawamu itu obat paling manjur buatku.",
-  "Kamu kuat, dan aku bangga banget sama kamu."
+  "Kehadiranmu selalu bikin hari-hariku terasa lebih tenang.",
+  "Tawamu itu masyallah obat paling manjur.",
+  "Kamu selalu berhasil melewati banyak hal sulit, and i'm proud of you."
  ],
  moods:[
-  {e:"😊",l:"Lagi senang",m:"Senang lihat kamu senang. Semoga matcha ini bikin harimu makin manis."},
+  {e:"😊",l:"Lagi senang",m:"Ikut senang dengarnya. Semoga matcha ini bisa melengkapi hari baikmu."},
   {e:"😐",l:"Biasa aja",m:"Hari yang biasa pun pantas dirayakan dengan secangkir matcha."},
   {e:"😤",l:"Lagi kesal",m:"Kesal itu boleh kok cintaa. Tarik napas, minum dulu, truss cerita nyaa."},
-  {e:"😢",l:"Lagi sedih",m:"Sini, peluk dulu dari jauh. Kamu nggak sendirian."}
+  {e:"😢",l:"Lagi sedih",m:"Sini, peluk dulu dari jauh. i'm always here for you."}
  ],
- letter:"sorry for everythink, jadi aku bikin matcha versi digital ini. Apa pun yang bikin harimu berat dan capek, jadi minumlah mactha digital ini wkwk. lovee uu.",
+ letter:"sorry for everything, jadi saya bikin matcha versi digital inii, buat balikin mood tetehnya. Apa pun yang bikin harinya berat dan melelahkan, minumlah mactha digital ini wkwk. lovee uu.",
  coupons:[
   ["Matcha beneran","Aku traktir 1 matcha favoritmu."],
   ["Peluk tanpa alasan","Berlaku kapan saja, tanpa syarat."],
