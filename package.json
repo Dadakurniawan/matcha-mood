@@ -1,0 +1,9 @@
+{
+  "name": "matcha-untukmu",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Game PWA bikin matcha pengembali mood",
+  "scripts": {
+    "dev": "npx serve . -l 3000"
+  }
+}

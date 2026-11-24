@@ -1,23 +1,51 @@
-# Matcha Mood PWA
+# Matcha untukmu (PWA)
 
-A small interactive mood-lifting matcha-making game, redesigned from the original standalone HTML.
+Game kecil bikin matcha pengembali mood. Statis penuh: tanpa build, tanpa dependensi, jalan offline setelah dibuka sekali.
 
-## Run locally
-- Open `index.html` directly for a quick preview (PWA features require localhost or HTTPS).
-- Recommended: run a static server, e.g. `npx serve .`.
+## Struktur
+```
+index.html            halaman utama
+config.js             ← EDIT INI untuk nama, surat, kupon, foto
+js/app.js             logika game
+css/style.css         tampilan
+css/fonts.css         @font-face (font di-host sendiri)
+fonts/                Fredoka & Nunito (woff2, lisensi OFL)
+icons/                ikon PWA (any + maskable) & apple-touch-icon
+foto/                 taruh foto kenangan di sini
+manifest.webmanifest  metadata PWA
+sw.js                 service worker (offline)
+vercel.json           header cache untuk Vercel
+```
 
-## Deploy to Vercel
-1. Upload this folder to a Git repository.
-2. Import the repository in Vercel.
-3. Framework preset: **Other**; Build Command: empty; Output Directory: `.`.
-4. Deploy. PWA install/offline caching work on HTTPS after the first visit.
+## Personalisasi
+Buka `config.js`. Untuk foto, taruh file di `foto/` lalu isi:
+```js
+photos: ["/foto/1.jpg", "/foto/2.jpg"],
+```
+Pakai awalan `/foto/...` (path absolut). Foto ikut di-cache otomatis setelah dilihat sekali.
 
-## Personalize
-- Edit `config.js` for mood messages, ingredient notes, coupons, photos, and secret text.
-- Settings button inside the game lets you change default name, letter, and secret message; these are saved locally in the browser.
-- Put photo files under `assets/images/`, then add their relative paths to `photos`, for example `['assets/images/photo1.jpg']` in `config.js`.
+## Jalankan lokal
+```bash
+npx serve . -l 3000
+```
+Buka http://localhost:3000 (service worker hanya aktif di `localhost` atau HTTPS, bukan `file://`).
 
-## PWA behavior
-- Service worker caches the core app shell.
-- On app updates, the cache version is updated in `sw.js` (`CACHE_NAME`).
-- Offline mode is available after the initial successful load; Google Fonts may not be cached, so system fallback fonts are used.
+## Deploy ke Vercel
+**Lewat GitHub (disarankan)**
+1. Push folder ini ke repo GitHub.
+2. vercel.com → Add New → Project → pilih repo.
+3. Framework Preset: **Other**. Build Command dan Output Directory dikosongkan. Klik Deploy.
+
+**Lewat CLI**
+```bash
+npm i -g vercel
+vercel        # preview
+vercel --prod # produksi
+```
+
+## Setiap kali update
+Ubah `VERSION` di `sw.js` (misal `v1.0.1`) sebelum deploy, supaya HP yang sudah menginstal mengambil versi terbaru. Tanpa itu, perubahan tetap masuk, tapi baru terlihat pada pembukaan kedua.
+
+## Pasang di HP
+- Android/Chrome: tombol **Pasang app** muncul di pojok atas, atau menu ⋮ → Install app.
+- iPhone/Safari: tombol Bagikan → **Add to Home Screen**.
